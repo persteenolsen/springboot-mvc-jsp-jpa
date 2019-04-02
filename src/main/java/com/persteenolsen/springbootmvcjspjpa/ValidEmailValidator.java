@@ -5,6 +5,9 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
+
+// This Java Class is a costum validation of an Email using 
+// EmailValidator of Apache Commons Validator ( look in the POM )
 public class ValidEmailValidator implements ConstraintValidator<ValidEmail, String> {
 
 	private int min;

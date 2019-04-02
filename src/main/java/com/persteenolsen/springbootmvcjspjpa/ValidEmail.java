@@ -10,6 +10,8 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+// This Interface is a costum validation of validate an Email 
+// Annotated (used) in the Model "PersonEntity" and implemented in the Java file ValidEmailValidator
 @Target({ METHOD, FIELD, ANNOTATION_TYPE })
 @Retention(RUNTIME)
 @Constraint(validatedBy = com.persteenolsen.springbootmvcjspjpa.ValidEmailValidator.class)

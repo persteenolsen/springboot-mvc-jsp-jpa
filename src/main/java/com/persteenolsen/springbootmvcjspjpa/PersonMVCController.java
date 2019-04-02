@@ -39,7 +39,7 @@ public class PersonMVCController {
     private PersonService personService;
 	
 	//--------------------------------Use by MVC / JSP --------------------------------------------------
-	// GET Persons (JSP) - Can be called by the URL
+	// Show a list of Persons  in a JSP View
 	@RequestMapping(value="/mvclistpersons", method=RequestMethod.GET)
 	public ModelAndView mvclistpersons() {
 
@@ -50,6 +50,7 @@ public class PersonMVCController {
 	 return model;
 	}
 
+	// Delete a Person by the ID and redirect to the JSP Viev representing a list of persons
 	@RequestMapping(value="/mvcdeleteperson/{id}", method=RequestMethod.GET)
 	public ModelAndView delete(@PathVariable("id") long id) {
 	 personService.deletePerson(id);
@@ -57,7 +58,7 @@ public class PersonMVCController {
 	 return new ModelAndView("redirect:/demo/mvclistpersons");
 	}
 
-	
+	// Display the Form used to Add or Update a Person 
 	@RequestMapping(value="/mvccreateperson/", method=RequestMethod.GET)
 	public ModelAndView createPerson() {
 	 ModelAndView model = new ModelAndView();
@@ -69,6 +70,8 @@ public class PersonMVCController {
 	 return model;
 	}
 	
+	// This method Get a Person by Id and populate the fields of the Form by the data 
+	// of the Person
 	@RequestMapping(value="/mvcupdateperson/{id}", method=RequestMethod.GET)
 	public ModelAndView editPerson(@PathVariable long id) {
 	 ModelAndView model = new ModelAndView();
@@ -80,7 +83,8 @@ public class PersonMVCController {
 	 return model;
 	}
 
-	
+	// This method save the data of the Person entered in the Form by Update or Create
+	// and display Errors if any or redirect to the JSP View with the list of persons if success
 	@RequestMapping(value="/mvcsaveperson", method=RequestMethod.POST)
 	public String save(@Valid @ModelAttribute("personForm") PersonEntity person, BindingResult bindingResult) {
 	
