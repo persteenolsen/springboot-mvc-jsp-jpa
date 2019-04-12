@@ -18,7 +18,7 @@
                         <a href="/demo/mvclistpersons">Show persons</a>
                     </li>
                        
-                    <li><a href="/">About this application</a></li>
+                    <li><a href="/welcome">About this application</a></li>
                    
                 </ul>
             </div>

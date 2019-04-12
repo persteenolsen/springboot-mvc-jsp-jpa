@@ -8,8 +8,9 @@ import org.springframework.boot.web.servlet.support.*;
 
 // The main entry point of the Java Spring Boot Web Application
 @SpringBootApplication
-public class SpringBootMvcJspJpaApplication extends SpringBootServletInitializer {
-
+public class SpringBootMvcJspJpaApplication extends SpringBootServletInitializer  {
+	
+	
     // Ready for builing a war file used for Tomcat
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
