@@ -1,5 +1,5 @@
 
-package com.persteenolsen.springbootmvcjspjpa;
+package com.persteenolsen.springbootmvcjspjpa.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
-import com.persteenolsen.springbootmvcjspjpa.ValidEmail;
+import com.persteenolsen.springbootmvcjspjpa.model.ValidEmail;
 
 // The table in the Database will have a name almost equal to "SpringBootMvcJspJpaPersons"
 @Entity

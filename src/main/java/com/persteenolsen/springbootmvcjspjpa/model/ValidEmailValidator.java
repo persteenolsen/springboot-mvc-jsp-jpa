@@ -1,4 +1,4 @@
-package com.persteenolsen.springbootmvcjspjpa;
+package com.persteenolsen.springbootmvcjspjpa.model;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

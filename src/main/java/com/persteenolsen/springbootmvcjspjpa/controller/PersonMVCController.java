@@ -1,4 +1,4 @@
-package com.persteenolsen.springbootmvcjspjpa;
+package com.persteenolsen.springbootmvcjspjpa.controller;
  
 import java.util.List;
  
@@ -19,8 +19,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.persteenolsen.springbootmvcjspjpa.PersonEntity;
-import com.persteenolsen.springbootmvcjspjpa.PersonService;
+import com.persteenolsen.springbootmvcjspjpa.model.PersonEntity;
+import com.persteenolsen.springbootmvcjspjpa.service.PersonService;
 
 
 @Controller    

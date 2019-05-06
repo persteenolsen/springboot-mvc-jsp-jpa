@@ -1,4 +1,4 @@
-package com.persteenolsen.springbootmvcjspjpa;
+package com.persteenolsen.springbootmvcjspjpa.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
  
-import com.persteenolsen.springbootmvcjspjpa.PersonEntity;
-import com.persteenolsen.springbootmvcjspjpa.PersonRepository;
+import com.persteenolsen.springbootmvcjspjpa.model.PersonEntity;
+import com.persteenolsen.springbootmvcjspjpa.dao.PersonRepository;
  
 @Service
 public class PersonService {

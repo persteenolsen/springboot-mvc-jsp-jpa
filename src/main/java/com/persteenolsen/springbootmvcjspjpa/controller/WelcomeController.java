@@ -1,6 +1,6 @@
 
 
-package com.persteenolsen.springbootmvcjspjpa;
+package com.persteenolsen.springbootmvcjspjpa.controller;
 
 import java.util.Map;
 
