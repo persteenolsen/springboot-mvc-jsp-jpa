@@ -28,6 +28,11 @@
 
 	<div class="header-text" >${welcomemessage}</div>
 
+	
+	
+	<div class="body-text" >${memorymessage}</div>
+
+
 	<br>
 	Take a look at the Web application by using the menu item "Show persons" or
 	by using the link <a href="/demo/mvclistpersons" target="_top">here</a>
@@ -47,14 +52,15 @@
 
 	<li>Visual Studio Code with the Microsoft Java Extension Pack</li>	
 	<li>Microsoft Azure App Service with a Free App Service Plan for web hosting</li>
-	<li>MS SQL Database</li>
+	<li>MySQL Database</li>
+	<li>HikariCP Datasource</li>
 	
 	</ul>
 
 	<ul>
 		<li>MVC as well as a Service and JPA Repository layer</li>	
 		<li>Maven as build tool</li>	
-		<li>JPA and Hibernate for initializing the Database</li>
+		<li>JPA implemented by Hibernate for initializing the Database and mapping objects</li>
 		<li>Hibernate Validator and Apache Commons Validater for server side form validation</li>
 		
 	</ul>

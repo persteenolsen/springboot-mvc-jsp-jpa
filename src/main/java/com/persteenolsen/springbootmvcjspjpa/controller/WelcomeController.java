@@ -13,15 +13,46 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WelcomeController {
 	
 	private String helloworld = "";
+
+	int mb = 1024*1024;
 		
 	//@GetMapping("/")
-	@GetMapping({"/welcome", "/home"})
+	//@GetMapping({"/welcome", "/home"})
+	@GetMapping({"/", "/welcome"})
 	public String welcome(Map<String, Object> model) {
 
-		helloworld = "Welcome to a Java Spring Boot MVC JSP JPA Web application!";
+		
+	//Getting the runtime reference from system
+	Runtime runtime = Runtime.getRuntime();
+	
+	//System.out.println("##### Heap utilization statistics [MB] #####");
+	
+	//Print used memory
+	//System.out.println("Used Memory:" + (runtime.totalMemory() - runtime.freeMemory()) / mb);
+    
+	long usedmemory = (runtime.totalMemory() - runtime.freeMemory()) / mb;
 
-		model.put("welcomemessage", helloworld);
+	
+	//Print free memory
+	//System.out.println("Free Memory:" + runtime.freeMemory() / mb);
+	long freememory = runtime.freeMemory() / mb;
+
+	//Print total available memory
+	//System.out.println("Total Memory:" + runtime.totalMemory() / mb);
+	long totalmemory = runtime.totalMemory() / mb;
+	
+	//Print Maximum available memory
+	//System.out.println("Max Memory:" + runtime.maxMemory() / mb);
+	long maxmemory = runtime.maxMemory() / mb;
+	
+	String memoryheapS = "Memory info in MB - Used: " + usedmemory + " Free: " + freememory + " Total: " + totalmemory + " Max: " + maxmemory;
+
+	model.put("memorymessage", memoryheapS);
+
+	helloworld = "Welcome to a Java Spring Boot MVC JSP JPA Web application!";
+
+	model.put("welcomemessage", helloworld);
 				
-		return "welcome";
+	return "welcome";
 	}
 }

@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.5.RELEASE</version>
+		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -28,19 +28,44 @@
 
 
 	 <!--For using JDBC datasource and for examble connect to a MS SQL server - CRUD if wanted-->
-     <dependency>
+     <!--dependency>
      <groupId>com.microsoft.sqlserver</groupId>
          <artifactId>mssql-jdbc</artifactId>
-      </dependency>
+      </dependency>-->
+			
 	  
+    <!--NOTE: The exlusion of com.zaxxer - HikariCP is for using Tomcat JDBC instead.
+	 -It seems that there is an issue with Hikari and MS SQL jdbc on Azure (low memory)-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<exclusions>
+        <exclusion>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </exclusion>
+    </exclusions>
 		</dependency>
+    <dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-jdbc</artifactId>
+    <version>9.0.10</version>
+    </dependency>
+
+
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        
+    </dependency>
 
     
 		<dependency>
@@ -73,6 +98,7 @@
 			<version>1.5.1</version>
 		</dependency>
 		
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -82,7 +108,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -93,7 +120,7 @@
 			</plugin>
 
 			
-	
+	<!--
 <plugin>
          <artifactId>maven-surefire-plugin</artifactId>
          <version>2.19.1</version>
@@ -103,7 +130,8 @@
           </includes>
           <testFailureIgnore>true</testFailureIgnore>
          </configuration>
-</plugin>
+</plugin>-->
+
 		</plugins>
 	</build>
 
