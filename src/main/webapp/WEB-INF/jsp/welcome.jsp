@@ -52,9 +52,9 @@
 
 	<li>Visual Studio Code with the Microsoft Java Extension Pack</li>	
 	<li>Microsoft Azure App Service with a Free App Service Plan for web hosting</li>
+	<li>JVM memory have been set to an alocation of 512 MB both initial and max because of the limited physial memory</li>
 	<li>MySQL Database</li>
 	<li>HikariCP Datasource</li>
-	
 	</ul>
 
 	<ul>
