@@ -3,7 +3,7 @@
 
 <html lang="en">
 <head>
-	<title>A Java Spring Boot MVC JSP JPA example</title>
+	<title>Java Spring Boot MVC JSP JPA example</title>
 	
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -49,12 +49,14 @@
 	<br><br>
 
 	<ul>
-
+     
+	<li>Updated: 16-09-2021</li>
+	<li>Migration from Java 8 to Java 11</li>
 	<li>Visual Studio Code with the Microsoft Java Extension Pack</li>	
 	<li>Microsoft Azure App Service with a Free App Service Plan for web hosting</li>
 	<li>JVM memory have been set to an alocation of 512 MB both initial and max because of the limited physial memory</li>
 	<li>MySQL Database</li>
-	<li>HikariCP Datasource</li>
+	<li>Tomcat JDBC Datasource instead of the default HikariCP </li>
 	</ul>
 
 	<ul>
